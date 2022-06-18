@@ -1,0 +1,58 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
+.opportunities {
+  background-color: $color-bg-light;
+  padding-top: 120px;
+  padding-bottom: 150px;
+
+  &__title {
+    margin-bottom: $gap * 5;
+  }
+
+  &__content {
+    display: grid;
+
+    @include xl-min {
+      column-gap: 120px;
+      row-gap: 75px;
+      padding: 0 40px;
+    }
+
+    @include xl {
+      gap: $gap-lg;
+    }
+
+    @include lg-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include lg-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.opportunity {
+
+  &__item {
+    display: flex;
+    gap: $gap-lg;
+    flex-direction: column;
+    text-align: center;
+
+  }
+
+  &__picture {
+    order: -1;
+  }
+
+  &__description {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

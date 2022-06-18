@@ -1,0 +1,72 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
+.loved {
+  background-color: $color-bg-dark;
+  padding: 70px 30px;
+}
+
+
+.loved-content {
+  display: flex;
+
+
+  @include lg-min {
+    align-items: center;
+    gap: 70px;
+  }
+
+  @include lg {
+    flex-direction: column;
+    /*text-align: center;*/
+    /*align-items: center;*/
+  }
+}
+
+
+.loved-info {
+  display: flex;
+
+  @include xl-min {
+    gap: $gap * 3;
+    align-items: center;
+    border-right: 1px solid $color-black;
+    padding-right: 80px;
+  }
+
+  @include xl-lg {
+    gap: $gap;
+    align-items: center;
+    border-right: 1px solid $color-black;
+    padding-right: $gap-lg;
+  }
+
+  @include lg {
+    border-right: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__description {
+    font-size: 35px;
+
+    @include lg-min {
+      line-height: 50px;
+      text-align: left;
+    }
+
+    @include lg-min {
+      line-height: 30px;
+      text-align: center;
+    }
+
+
+  }
+}
+
+.loved-lables {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  flex-wrap: wrap;
+}

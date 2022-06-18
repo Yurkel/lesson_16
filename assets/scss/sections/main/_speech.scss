@@ -1,0 +1,39 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
+.speech {
+  background-color: $color-bg-calm;
+}
+
+.speech-content {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 105px;
+
+  @include lg-min {
+    /*min-height: 500px;*/
+    gap: $gap * 3;
+  }
+
+  @include lg {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__description {
+    font-size: 2em;
+    padding-bottom: $gap;
+  }
+
+  &__logo {
+    max-height: 25px;
+    margin-bottom: $gap;
+  }
+}

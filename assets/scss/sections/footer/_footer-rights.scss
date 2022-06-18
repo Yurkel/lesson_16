@@ -1,0 +1,37 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
+.footer-stamp {
+  min-height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  line-height: 15px;
+  gap: $gap;
+
+}
+
+.stamp-left {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+
+
+  &__description {
+    max-width: 300px;
+  }
+}
+
+.stamp-right {
+
+
+  @include lg-min {
+    padding-right: 100px;
+  }
+
+  @include lg-md {
+    padding-right: 0;
+  }
+
+}
